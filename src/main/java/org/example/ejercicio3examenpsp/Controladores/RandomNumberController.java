@@ -21,7 +21,7 @@ public class RandomNumberController {
                 .toArray();
         return ResponseEntity.ok(numbers);
     }
-// Devuelve un número aleatorio de x dígitos
+// Devuelve un número aleatorio de d dígitos
     @GetMapping("/number/{d}")
     public ResponseEntity<RandomNumber> getRandomNumber(@PathVariable int d) {
         int number = random.nextInt((int) Math.pow(10, d));
